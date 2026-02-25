@@ -1,0 +1,19 @@
+name: On One Directory Change
+
+on:
+  push:
+    paths:
+      - 'one/**'
+  pull_request:
+    paths:
+      - 'one/**'
+
+jobs:
+  hello-change:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Hello change
+        run: echo "hello change"
