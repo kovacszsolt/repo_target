@@ -2,11 +2,7 @@ name: On One Directory Change
 
 on:
   push:
-    paths:
-      - 'one/**'
-  pull_request:
-    paths:
-      - 'one/**'
+    branches: [main]
 
 jobs:
   hello-change:
